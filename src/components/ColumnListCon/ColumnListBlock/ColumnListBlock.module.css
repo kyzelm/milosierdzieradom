@@ -1,0 +1,22 @@
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+
+    > p {
+        padding: 1rem;
+        width: 100%;
+        background-color: var(--color-dark-2);
+        border-radius: 1rem;
+        text-align: left;
+        font-size: 1.5rem;
+        color: var(--color-light-1);
+        cursor: pointer;
+    }
+}
+
+.text {
+    padding: 0 1rem;
+}

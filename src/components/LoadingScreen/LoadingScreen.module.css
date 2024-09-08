@@ -1,0 +1,87 @@
+.loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--color-dark-2);
+    transition-timing-function: linear;
+
+    &[data-active="true"] {
+        transition-duration: 1s;
+        opacity: 1;
+    }
+
+    &[data-active="false"] {
+        transition-duration: 1s;
+        opacity: 0;
+    }
+
+    span {
+        position: absolute;
+        width: 1.8rem;
+        height: 1.8rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 20%;
+        background-color: var(--color-main);
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        &:first-of-type {
+            animation-name: loadingDotX;
+        }
+
+        &:last-of-type {
+            animation-name: loadingDotY;
+        }
+    }
+}
+
+@keyframes loadingDotX {
+    0% {
+        transform: translateX(-2.4rem);
+    }
+
+    25% {
+        transform: translateX(-2.4rem);
+    }
+
+    50% {
+        transform: translateX(2.4rem);
+    }
+
+    75% {
+        transform: translateX(2.4rem);
+    }
+
+    100% {
+        transform: translateX(-2.4rem);
+    }
+}
+
+@keyframes loadingDotY {
+    0% {
+        transform: translateY(-2.4rem);
+    }
+
+    25% {
+        transform: translateY(2.4rem);
+    }
+
+    50% {
+        transform: translateY(2.4rem);
+    }
+
+    75% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(-2.4rem);
+    }
+}

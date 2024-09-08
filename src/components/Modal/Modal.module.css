@@ -1,0 +1,55 @@
+.dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 95;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    & > * {
+        position: absolute;
+    }
+
+    & .backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+    }
+
+    & .textBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: var(--color-dark-1);
+        padding: 2rem;
+        margin: 4rem clamp(4rem, 100%, calc((100dvw - 1400px) / 2));
+        border-radius: 1rem;
+        box-shadow: var(--shadow-section);
+        border: 0.05rem solid var(--color-main);
+        color: var(--color-light-1);
+        font-size: 1.4rem;
+        text-align: center;
+
+        & button {
+            padding: 0.7rem 1.2rem;
+            border: none;
+            background-color: var(--color-main);
+            color: var(--color-dark-1);
+            font-size: 1.2rem;
+            transition: background-color 0.2s;
+            transition-timing-function: ease-in-out;
+            outline: none;
+            border-radius: 0.5rem;
+
+            &:hover, &:focus {
+                background-color: var(--color-light-2);
+            }
+        }
+    }
+}

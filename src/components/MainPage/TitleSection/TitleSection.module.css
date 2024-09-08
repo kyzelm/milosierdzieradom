@@ -1,0 +1,60 @@
+.titleSection {
+    height: 100dvh;
+    background-image: url("/main-photo.webp");
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-light-1);
+}
+
+.cornerImage {
+    height: 10rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 1.2rem;
+    border: 0.05rem solid var(--color-light-2);
+    box-shadow: 0 0 2px 2px #000;
+    border-radius: 1rem;
+    filter: brightness(1.4);
+}
+
+.titleBlock {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    padding: 3rem 2rem 3rem 5rem;
+    border: 0.05rem solid var(--color-light-2);
+    border-radius: 1rem;
+    background-color: #000000aa;
+    font-size: 2rem;
+    text-align: right;
+    backdrop-filter: blur(0.1rem);
+    transform: translate(15%, -50%);
+    overflow: hidden;
+
+    h1 {
+        color: var(--color-main);
+    }
+}
+
+.scrollDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100dvw;
+    height: 2.2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(0.1rem);
+    color: var(--color-main);
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cornerImage {
+        top: 1.2rem;
+    }
+}

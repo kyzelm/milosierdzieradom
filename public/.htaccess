@@ -1,0 +1,13 @@
+# Hsts
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+Options -MultiViews
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^milosierdzieradom.pl [NC]
+RewriteRule ^(.*)$ http://www.milosierdzieradom.pl/$1 [L,R=301]
+
+# Redirect to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]

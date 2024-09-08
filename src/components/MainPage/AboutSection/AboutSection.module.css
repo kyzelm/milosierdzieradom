@@ -1,0 +1,24 @@
+.aboutSection {
+    font-size: 1.3rem;
+    box-shadow: none !important;
+
+    > * {
+        color: var(--color-dark-1);
+    }
+}
+
+.firstInfoCon {
+    margin: 1rem 0;
+
+    q {
+        display: block;
+        padding: 0 1rem 1rem 1rem;
+        text-align: center;
+        font-style: italic;
+        opacity: 0.6;
+    }
+
+    p {
+        text-align: justify;
+    }
+}

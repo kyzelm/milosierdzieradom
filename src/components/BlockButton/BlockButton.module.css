@@ -1,0 +1,16 @@
+.button {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 0.1rem solid var(--color-dark-1);
+    transition: scale 0.2s, filter 0.2s, background-color 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        scale: 0.95;
+    }
+}

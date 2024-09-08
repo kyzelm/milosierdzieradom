@@ -1,0 +1,28 @@
+.loadingBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  span {
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 20%;
+    background-color: var(--color-main);
+    animation: loading 3s infinite linear;
+  }
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

@@ -1,0 +1,178 @@
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 100%;
+    background-color: var(--color-dark-1);
+    box-shadow: var(--shadow-section);
+    color: var(--color-light-1);
+    padding: 4rem clamp(2rem, 100%, calc((100dvw - 1400px) / 2));
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.socjalSection {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-grow: 1;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.6rem;
+        height: 3.6rem;
+        border: 0.05rem solid var(--color-main);
+        border-radius: 50%;
+        background-color: var(--color-dark-1);
+        transition: background-color 0.2s, color 0.2s;
+        font-size: 1.6rem;
+        color: var(--color-light-1);
+
+        &:hover {
+            background-color: var(--color-main);
+            color: var(--color-dark-1);
+        }
+    }
+}
+
+.contactFormSection {
+    position: relative;
+    text-align: center;
+    flex-grow: 2;
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+        width: 38rem;
+
+        input {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--color-dark-1);
+            border: 0.05rem solid var(--color-main);
+            color: var(--color-light-1);
+            font-size: 1rem;
+            transition: background-color 0.2s, color 0.2s, border 0.2s;
+            transition-timing-function: ease-in-out;
+            outline: none;
+
+            &[name="imie"] {
+                grid-column: 1 / 2;
+            }
+
+            &[name="email"] {
+                grid-column: 2 / 4;
+            }
+
+            &[name="tytul"] {
+                grid-column: 1 / 4;
+            }
+
+            &[type="submit"],
+            &[type="reset"] {
+                background-color: var(--color-main);
+                color: var(--color-dark-1);
+
+                &:hover,
+                &:focus {
+                    background-color: var(--color-light-2);
+                    border: 0.05rem solid var(--color-light-2);
+                }
+            }
+
+            &[type="submit"] {
+                grid-column: 1 / 3;
+            }
+
+            &[type="reset"] {
+                grid-column: 3 / 4;
+            }
+
+            &:focus {
+                border: 0.05rem solid var(--color-light-2);
+            }
+        }
+
+        textarea {
+            grid-column: 1 / 4;
+            padding: 0.5rem;
+            max-width: 100%;
+            aspect-ratio: 5 / 1;
+            border-radius: 0.5rem;
+            background-color: var(--color-dark-1);
+            border: 0.05rem solid var(--color-main);
+            color: var(--color-light-1);
+            font-size: 1rem;
+            transition: border 0.2s;
+            transition-timing-function: ease-in-out;
+            outline: none;
+            resize: none;
+
+            &:focus {
+                border: 0.05rem solid var(--color-light-2);
+            }
+        }
+    }
+}
+
+.privacyPolicyButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0.7rem 0.4rem;
+    border: none;
+    font-size: 0.9rem;
+    background-color: var(--color-main);
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in-out;
+    outline: none;
+    writing-mode: vertical-rl;
+    translate: 0 -50%;
+
+    &:hover, &:focus {
+        background-color: var(--color-light-2);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
+
+        & section {
+            width: 100%;
+        }
+    }
+
+    .socjalSection {
+        justify-content: center;
+    }
+
+    .contactFormSection {
+        order: -1;
+
+        form {
+            width: 100%;
+            grid-template-columns: 1fr !important;
+
+            input {
+                width: 100%;
+                grid-column: 1 / 2 !important;
+            }
+
+            textarea {
+                grid-column: 1 / 2 !important;
+            }
+        }
+    }
+}

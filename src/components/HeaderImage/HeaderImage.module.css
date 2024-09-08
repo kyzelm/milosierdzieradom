@@ -1,0 +1,9 @@
+.headerImage {
+    height: 27dvh;
+    width: 100%;
+    background-image: url("/main-photo-2.webp");
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
