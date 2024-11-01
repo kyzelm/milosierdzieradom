@@ -11,54 +11,50 @@ import GallerySubpage from "./components/GalleryPage/GallerySubpage/GallerySubpa
 import ContactPage from "./components/ContactPage/ContactPage.jsx";
 
 const router = createBrowserRouter([{
-    element: <Root/>, children: [
+  element: <Root/>, errorElement: <PageNotFound/>, children: [
+    {
+      path: "/",
+      element: <MainPage/>
+    },
+    {
+      path: "/announcements",
+      element: <AnnouncementsPage/>
+    },
+    {
+      path: "/intentions",
+      element: <IntentionsPage/>
+    },
+    {
+      path: "/news",
+      children: [
         {
-            path: "*",
-            element: <PageNotFound/>
+          index: true,
+          element: <NewsPage/>
         },
         {
-            path: "/",
-            element: <MainPage/>
-        },
-        {
-            path: "/announcements",
-            element: <AnnouncementsPage/>
-        },
-        {
-            path: "/intentions",
-            element: <IntentionsPage/>
-        },
-        {
-            path: "/news",
-            children: [
-                {
-                    index: true,
-                    element: <NewsPage/>
-                },
-                {
-                    path: ":slug",
-                    element: <NewsSubpage/>
-                }
-            ],
-        },
-        {
-            path: "/gallery",
-            children: [
-                {
-                    index: true,
-                    element: <GalleryPage/>
-                },
-                {
-                    path: ":slug",
-                    element: <GallerySubpage/>
-                }
-            ],
-        },
-        {
-            path: "/contact",
-            element: <ContactPage/>
+          path: ":slug",
+          element: <NewsSubpage/>
         }
-    ]
+      ],
+    },
+    {
+      path: "/gallery",
+      children: [
+        {
+          index: true,
+          element: <GalleryPage/>
+        },
+        {
+          path: ":slug",
+          element: <GallerySubpage/>
+        }
+      ],
+    },
+    {
+      path: "/contact",
+      element: <ContactPage/>
+    }
+  ]
 }]);
 
 export default router;
