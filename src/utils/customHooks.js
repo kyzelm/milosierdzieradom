@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {storyblokApi} from "../main.jsx";
 import {dataActions} from "../store/dataSlice.js";
-import {getDateStoryblokFormat} from "./storyblokDataConverter.js";
+import {getDateStoryblokFormat} from "./storyblokDataConverter.jsx";
 
 // uiEvents --------------------------------------------------------------------
 

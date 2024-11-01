@@ -5,14 +5,12 @@ import NewsSection from "./NewsSection/NewsSection.jsx";
 import AnimatedMain from "../AnimatedMain/AnimatedMain.jsx";
 
 function MainPage() {
-    return (
-        <AnimatedMain>
-            <TitleSection/>
-            <AboutSection/>
-            <TimetableSection/>
-            <NewsSection/>
-        </AnimatedMain>
-    );
+  return <AnimatedMain>
+    <TitleSection/>
+    <AboutSection/>
+    <TimetableSection/>
+    <NewsSection/>
+  </AnimatedMain>;
 }
 
 export default MainPage;

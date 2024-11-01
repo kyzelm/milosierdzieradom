@@ -11,7 +11,9 @@ import GallerySubpage from "./components/GalleryPage/GallerySubpage/GallerySubpa
 import ContactPage from "./components/ContactPage/ContactPage.jsx";
 
 const router = createBrowserRouter([{
-  element: <Root/>, errorElement: <PageNotFound/>, children: [
+  element: <Root/>,
+  // errorElement: <PageNotFound/>, 
+  children: [
     {
       path: "/",
       element: <MainPage/>

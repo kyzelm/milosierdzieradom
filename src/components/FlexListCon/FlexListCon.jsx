@@ -1,6 +1,6 @@
 import styles from "./FlexListCon.module.css";
 import FlexListBlock from "./FlexListBlock/FlexListBlock.jsx";
-import {getDateFromStoryblokFormat} from "../../utils/storyblokDataConverter.js";
+import {getDateFromStoryblokFormat} from "../../utils/storyblokDataConverter.jsx";
 import PropTypes from "prop-types";
 
 function FlexListCon({itemsList}) {
